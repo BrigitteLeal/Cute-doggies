@@ -9,12 +9,30 @@
 </head>
 <body>
     <h1>Cute doggies</h1>
-    <div>
-        <img id="img1" alt="foto de perritos aleatorios">
-        <img id="img2" alt="foto de perritos aleatorios">
-        <img id="img3" alt="foto de perritos aleatorios"> 
-    </div>    
-        <button onclick="generateNewDog()">Generate new dog</button> 
+    <span id="error"></span>
+
+    <section id="randomDog">
+        <h2>Random doggies</h2>
+        
+        <article>
+            <img id="img1" alt="foto de perritos aleatorios">
+            <button id="btn1">Guardar en favorito</button> 
+        </article>
+
+        <article>
+            <img id="img2" alt="foto de perritos aleatorios">
+            <button id="btn2">Guardar en favorito</button> 
+        </article>
+        <button onclick="loadRandomDog()">Recargar</button> 
+    </section> 
+
+    <section id="favoriteDog">
+        <h2>Favorites doggies</h2>
+        <article>
+            <img id="img1" alt="foto de perritos aleatorios">
+            <button>Sacar de favoritos</button> 
+        </article>
+    </section>
     <script src="./index.js"></script>
 </body>
 </html>
