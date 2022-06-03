@@ -26,6 +26,14 @@
         <button onclick="loadRandomDog()">Recargar</button> 
     </section> 
 
+    
+    <section id="uploadingDog">
+        <h2>Sube la foto de tu perrito</h2>
+        <form id="uploadingForm">
+            <input type="file" id="file" name="file"/>
+            <button type="button" onclick="uploadDogPhoto()">Subir foto</button>
+        </form>
+    </section>
     <section id="favoriteDog">
         <h2>Favorites doggies</h2>
         <article>
@@ -33,6 +41,7 @@
             <button>Sacar de favoritos</button> 
         </article>
     </section>
+    
     <script src="./index.js"></script>
 </body>
 </html>
