@@ -3,23 +3,84 @@
     margin: 0;
     padding: 0;
 }
-h1,
-h2 {
-    margin: 0;
-    font-size: 90px;
-    /* text-align: center; */
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+html {
+    font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
 }
-body {
+:root {
+    --turquouse: #86E7F0;
+    --light-blue: #99C4F7;
+    --covalto: #9896E0;
+    --light-purple: #C899F7;
+    --pink: #EE8BF0;
+    --dark-pink: #e72fea;
+}
+header {
     width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--covalto);
+    z-index: 10;
 }
-section {
-    margin: 0 auto;
-    /* display: flex; */
-    /* justify-content: center; */
+header div {
+    width: 80px;
+    height: 80px;
+    background-color: var(--light-blue);
+    border: 2px solid #6f8cb1;
+    border-radius: 50%;
+    z-index: 100;
+}
+header .logo {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    right: calc(100% / 2 - 30px);
+    top: 10px;
+    z-index: 1000;
+}
+h1 {
+    text-align: center;
+    position: absolute;
+    top: 65px;
+    left: calc(100% / 2 - 75px);
+    color: white;
+    font-weight: 700;
+    z-index: 2000;
+}
+main {
+    width: 100%;
+    height: auto;
+    background-color: white;
+}
+#randomDog {
+    height: 350px;
+    background-color: #e4f7f9;
+}
+.random-title {
+    margin: 0 10px 10px 10px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    color: var(--turquouse);
+    font-weight: 700;
+}
+.horizontal-scroll {
+    display: flex;
+    height: 255px;
+    overflow-x: scroll;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;    
+}
+.random-dogs-container {
+    margin: 0 10px;
+    width: 210px;
+    height: 240px;
+    border: 3px solid var(--turquouse);
+    border-radius: 10px;
+    background-color: white;
 }
 img {
-    
     width: 200px;
     height: 200px;
     background-position: center;
@@ -28,13 +89,93 @@ img {
     object-fit: contain;
 }
 button {
-    margin: 0 auto;
-    width: 200px;
-    height: 40px;
-    font-size: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    border: none;
+    border-radius: 0 0 10px 10px;
+    background-color: var(--turquouse);
+}
+.button-random .fa-heart {
+    margin: 5px;
+    font-size: 2.2rem;
+    color: var(--dark-pink);
+}
+.button-load {
+    margin: 10px;
+    width: 80px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: 10px;
-    background-color: #006eff;
+    background-color: var(--turquouse);
     color: white;
     font-weight: 700;
+}
+button:hover,
+.upload-button:hover,
+.input-container input {
+    cursor: pointer;
+    opacity: 0.7;
+}
+.favorite-dogs {
+    padding-bottom: 20px;
+    background-color: #f3def3;
+}
+.favorite-title {
+    margin: 0 10px 10px 10px;
+    padding-top: 10px;
+    color: var(--pink);
+}
+#uploadingDog {
+    padding-bottom: 20px;
+    background-color: #f0ebf5;
+}
+.upload-title {
+    margin: 0 10px 10px 10px;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    color: var(--light-purple);
+    font-weight: 700;
+}
+.form {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    width: 250px;
+    height: 330px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 3px solid var(--light-purple);
+    border-radius: 10px;
+}
+.input-container {
+    padding: 10px 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--light-purple);
+    border-radius: 10px 10px 0 0;
+}
+.input-container input {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.preview {
+    width: 100%;
+    height: 250px;
+    background-color: white;
+}
+.form .upload-button {
+    width:100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    background-color: var(--light-purple);
+    border-radius: 0 0 10px 10px;
 }

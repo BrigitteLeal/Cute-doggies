@@ -4,44 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./index.css">
+    <script src="https://kit.fontawesome.com/3a04f89f4a.js" crossorigin="anonymous"></script>
     <title>Cute doggies</title>
 </head>
 <body>
-    <h1>Cute doggies</h1>
-    <span id="error"></span>
-
-    <section id="randomDog">
-        <h2>Random doggies</h2>
+    <header>
+        <div><img class="logo" src="./assets/1f436.png"></div>
+        <h1>CUTE DOGGIES</h1>
+    </header>
+    <main>
+        <span id="error"></span>
+        <section id="randomDog">
+            <h2 class="random-title">RANDOM DOGGIES</h2>
+            <div class="horizontal-scroll">
+                <article class="random-dogs-container">
+                        <img id="img1" class="random-img" alt="foto de perritos aleatorios">
+                        <button class="button button-random" id="btn1"><i class="fa-solid fa-heart"></i></i></button> 
+                </article>
+                <article class="random-dogs-container">
+                    <img id="img2" class="random-img" alt="foto de perritos aleatorios">
+                    <button class="button button-random" id="btn2"><i class="fa-solid fa-heart"></i></button> 
+                </article>
+                <article class="random-dogs-container">
+                    <img id="img3" class="random-img" alt="foto de perritos aleatorios">
+                    <button class="button button-random" id="btn3"><i class="fa-solid fa-heart"></i></button> 
+                </article>
+                <article class="random-dogs-container">
+                    <img id="img4" class="random-img" alt="foto de perritos aleatorios">
+                    <button class="button button-random" id="btn4"><i class="fa-solid fa-heart"></i></button> 
+                </article>
+                <article class="random-dogs-container">
+                    <img id="img5" class="random-img" alt="foto de perritos aleatorios">
+                    <button class="button button-random" id="btn5"><i class="fa-solid fa-heart"></i></button> 
+                </article>
+                <article class="random-dogs-container">
+                    <img id="img6" class="random-img" alt="foto de perritos aleatorios">
+                    <button class="button button-random" id="btn6"><i class="fa-solid fa-heart"></i></button> 
+                </article>
+            </div>
+            <button class="button button-load" onclick="loadRandomDog()">Reload</button> 
+        </section> 
+        <section class="favorite-dogs">
+            <h2 class="favorite-title">FAVORITES DOGGIES</h2>
+            <section id="favoriteDog" class="favorite-dogs-container">
+                <article>
+                    <img id="img1" alt="foto de perritos aleatorios">
+                    <button><i class="fa-solid fa-trash-can"></i></button> 
+                </article>
+            </section>
+        </section>
+        <section id="uploadingDog">
+            <h2 class="upload-title">UPLOAD YOUR DOGGIE'S PHOTO</h2>
+            <form class="form" id="uploadingForm">
+                <div class="input-container">
+                    <input type="file" id="file" name="file" onchange="previewImage()"/> <!-- El evento change se dispara para elementos <input>, <select>, y <textarea> cuando una alteración al valor de un elemento es confirmada por el usuario.  -->
+                </div>
+                <img class="preview" id="preview" alt="preview photo">
+                <button class="upload-button" type="button" id="submitDog" onclick="uploadDogPhoto()">UPLOAD PHOTO</button>
+            </form>
+        </section>
         
-        <article>
-            <img id="img1" alt="foto de perritos aleatorios">
-            <button id="btn1">Guardar en favorito</button> 
-        </article>
-
-        <article>
-            <img id="img2" alt="foto de perritos aleatorios">
-            <button id="btn2">Guardar en favorito</button> 
-        </article>
-        <button onclick="loadRandomDog()">Recargar</button> 
-    </section> 
+    </main>
 
     
-    <section id="uploadingDog">
-        <h2>Sube la foto de tu perrito</h2>
-        <form id="uploadingForm">
-            <input type="file" id="file" name="file"/>
-            <button type="button" onclick="uploadDogPhoto()">Subir foto</button>
-        </form>
-    </section>
-    <section id="favoriteDog">
-        <h2>Favorites doggies</h2>
-        <article>
-            <img id="img1" alt="foto de perritos aleatorios">
-            <button>Sacar de favoritos</button> 
-        </article>
-    </section>
-    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
